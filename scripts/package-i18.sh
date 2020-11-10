@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-LOCALES_LINK=`node -e "console.log(require('./.lskjs.js').i18.url)"`
-LOCALES_DIST="./i18"
+I18_URL=`node -e "console.log(require('./.lskjs.js').i18.url)"`
+I18_DIST="./i18"
 
-echo "$LOCALES_LINK => $LOCALES_DIST"
+echo "$I18_URL => $I18_DIST"
 
-rm -rf $LOCALES_DIST && \
-node ../../node_modules/@lskjs/build-locales/bin/build-locales --locales ru,en --link $LOCALES_LINK --dist $LOCALES_DIST && \
+rm -rf $I18_DIST && \
+node ../../node_modules/@lskjs/build-locales/bin/build-locales --locales ru,en --link $I18_URL --dist $I18_DIST && \
 echo "done"

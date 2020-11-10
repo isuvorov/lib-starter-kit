@@ -1,5 +1,6 @@
 const eslintConfig = require('../.eslintrc.js');
 const path = require('path');
+process.env.DANGEROUSLY_DISABLE_HOST_CHECK = 'true';
 
 module.exports = function override(config) {
   // ESLint loader config override
