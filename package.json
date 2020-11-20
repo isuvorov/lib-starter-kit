@@ -13,6 +13,7 @@
     "dev:cra": "lerna exec -- npm run dev:cra",
     "dev:server": "lerna exec -- npm run dev:server",
     "release": "lerna publish --skip-npm --exact",
+    "release:yes": "lerna publish --skip-npm --exact --github-release --yes",
     "release:patch": "lerna publish --skip-npm --exact -m \"release: %s\" --yes patch",
     "release:it": "release-it",
     "release:changelog": "lerna-changelog",

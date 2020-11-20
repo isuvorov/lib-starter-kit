@@ -1,8 +1,8 @@
 /* eslint-disable */
 var path = require('path');
 const user = process.env.USER;
-const error = user === 'isuvorov' ? 'off' : 'error';
-const warn = user === 'isuvorov' ? 'off' : 'warn';
+const error = user === 'isuvorov2' ? 'off' : 'error';
+const warn = user === 'isuvorov2' ? 'off' : 'warn';
 
 const rules = {
   'max-len': [
@@ -40,6 +40,10 @@ const rules = {
       ts: 'never',
       tsx: 'never',
     },
+  ],
+  'import/no-extraneous-dependencies': [
+    'error',
+    { devDependencies: false, optionalDependencies: true, peerDependencies: true },
   ],
   '@typescript-eslint/no-explicit-any': warn,
 };
