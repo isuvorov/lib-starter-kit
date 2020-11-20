@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ./scripts/linkwatch.sh $HOME/projects/lskjs/packages/bots/build `pwd`/packages/app/node_modules/@lskjs/bots
+
 # https://github.com/watchexec/watchexec
 # `brew install watchexec`
 

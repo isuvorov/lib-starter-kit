@@ -17,6 +17,7 @@
     "release:it": "release-it",
     "release:changelog": "lerna-changelog",
     "build-locales": "./scripts/build-locales.sh",
+    "i18": "./scripts/i18.sh",
     "bootstrap": "./scripts/bootstrap.sh",
     "dns": "./scripts/dns.sh",
     "linkwatch": "./scripts/linkwatch.sh",
