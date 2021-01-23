@@ -1,8 +1,6 @@
 /* eslint-disable */
 var path = require('path');
 const user = process.env.USER;
-const error = user === 'isuvorov' ? 'off' : 'error';
-const warn = user === 'isuvorov' ? 'off' : 'warn';
 
 const rules = {
   'max-len': [
@@ -19,8 +17,8 @@ const rules = {
   'no-underscore-dangle': 'off',
   'no-throw-literal': 'off',
   //
-  'react/prop-types': error,
-  'react/forbid-prop-types': error,
+  'react/prop-types': 'error',
+  'react/forbid-prop-types': 'error',
 
   'react/state-in-constructor': 'off',
   'react/jsx-props-no-spreading': 'off',
@@ -45,47 +43,35 @@ const rules = {
     'error',
     { devDependencies: false, optionalDependencies: true, peerDependencies: true },
   ],
-  '@typescript-eslint/no-explicit-any': warn,
+  '@typescript-eslint/no-explicit-any': 'warn',
 };
 
-const res = {
-  parser: 'babel-eslint',
+const eslint = {
   env: {
-    browser: true,
-    es6: true,
+    browser: false,
+    node: true,
   },
-  extends: ['eslint:recommended', 'airbnb', 'plugin:prettier/recommended'],
-  plugins: ['import'],
-  parserOptions: {
-    ecmaVersion: 8,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-      modules: true,
-    },
-  },
-  overrides: [
-    {
-      files: ['**/*.ts', '**/*.tsx'],
-      env: { browser: true, es6: true, node: true },
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'eslint:recommended',
-        'airbnb',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
-      ],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaFeatures: { jsx: true },
-        ecmaVersion: 2018,
-        sourceType: 'module',
-        project: './packages/**/tsconfig.json',
-      },
-      plugins: ['import', '@typescript-eslint'],
-      rules,
-    },
+  extends: [
+    // 'eslint:recommended',
+    'airbnb-base',
+    'prettier',
+    'plugin:prettier/recommended',
   ],
+  parser: "babel-eslint",
+  parserOptions: {
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'prettier'],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        // always try to resolve types under `<root>@types` directory even it doesn't contain any source code,
+        // like `@types/unist`
+        alwaysTryTypes: true,
+      },
+    },
+  },
   globals: {
     __SERVER__: true,
     __CLIENT__: true,
@@ -93,13 +79,19 @@ const res = {
     __STAGE__: true,
   },
   rules,
-  settings: {
-    'import/resolver': {
-      node: {
-        paths: [path.resolve(__dirname, 'src')],
-      },
-    },
-  },
 };
 
-module.exports = res;
+
+eslint.overrides = [{
+  files: ['**/*.ts', '**/*.tsx'],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    ...eslint.extends,
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+}],
+
+
+
+module.exports = eslint;

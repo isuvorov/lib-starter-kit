@@ -1,26 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "build/lib",
+    // "target": "es5",
+    "target": "ES2019",
+    "outDir": "build",
     "module": "commonjs",
-    "target": "es5",
-    "lib": [
-      "es5",
-      "es6",
-      "es7",
-      "es2017",
-      "dom"
-    ],
+    // "lib": [
+    //   "es5",
+    //   "es6",
+    //   "es7",
+    //   "es2017",
+    //   "dom"
+    // ],
     "sourceMap": true,
     "allowJs": true,
     // "checkJs": false,
     // "jsx": "preserve",
     "jsx": "react",
-    "moduleResolution": "node",
-    "rootDirs": [
-      "src",
-      "stories"
-    ],
+    // "moduleResolution": "node",
+    // "rootDirs": ["src"],
     "baseUrl": "src",
+
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -34,9 +33,7 @@
     // "emitDecoratorMetadata": true,
     // "skipLibCheck": true
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": [
     "node_modules",
     "build",
@@ -44,3 +41,16 @@
     "scripts"
   ]
 }
+// {
+//   "compilerOptions": {
+//     "target": "ES2019",
+//     "module": "commonjs",
+//     "build": false,
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true
+//   },
+//   "include": [
+//     "src/**/*.ts"
+//   ],
+// }
