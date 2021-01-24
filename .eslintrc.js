@@ -1,7 +1,6 @@
-/* eslint-disable */
-var path = require('path');
-const user = process.env.USER;
-
+const rulesJsOnly = {
+  '@typescript-eslint/explicit-module-boundary-types': 'off',
+};
 const rules = {
   'max-len': [
     'error',
@@ -33,36 +32,59 @@ const rules = {
     'ignorePackages',
     {
       js: 'never',
-      mjs: 'never',
       jsx: 'never',
       ts: 'never',
       tsx: 'never',
     },
   ],
+  // [
+  //   'error',
+  //   'ignorePackages',
+  //   {
+  //     js: 'never',
+  //     jsx: 'never',
+  //     ts: 'never',
+  //     tsx: 'never',
+  //   },
+  // ],
   'import/no-extraneous-dependencies': [
     'error',
     { devDependencies: false, optionalDependencies: true, peerDependencies: true },
   ],
-  '@typescript-eslint/no-explicit-any': 'warn',
+  // '@typescript-eslint/no-explicit-any': 'warn',
+
+  'prettier/prettier': 'warn',
+
+  // its for orders
+  'import/order': 'off',
+  'sort-imports': 'off',
+  'simple-import-sort/imports': 'error',
+
+  // its fix
+  'no-unused-vars': 'off',
+  '@typescript-eslint/no-unused-vars': ['error'],
+  'no-use-before-define': 'off',
+  '@typescript-eslint/no-use-before-define': ['error'],
 };
 
-const eslint = {
+module.exports = {
   env: {
     browser: false,
     node: true,
   },
   extends: [
-    // 'eslint:recommended',
     'airbnb-base',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:prettier/recommended',
   ],
-  parser: "babel-eslint",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'prettier'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'prettier'],
   settings: {
     'import/resolver': {
       typescript: {
@@ -72,26 +94,38 @@ const eslint = {
       },
     },
   },
-  globals: {
-    __SERVER__: true,
-    __CLIENT__: true,
-    __DEV__: true,
-    __STAGE__: true,
-  },
+  // rules: {
+  //   'prettier/prettier': 'error',
+  //   '@typescript-eslint/ban-ts-comment': 'off',
+  //   'no-shadow': 'off',
+  //   '@typescript-eslint/no-shadow': 'error',
+  //   'no-use-before-define': ['error', { functions: false }],
+  //   'import/extensions': [
+  //     'error',
+  //     'ignorePackages',
+  //     {
+  //       js: 'never',
+  //       ts: 'never',
+  //     },
+  //   ],
+  //   'no-restricted-imports': [
+  //     'error',
+  //     {
+  //       name: 'config',
+  //       message: 'Please use getConfigValue util instead',
+  //     },
+  //   ],
+  //   'import/prefer-default-export': 'off',
+  //   'import/no-default-export': 'error',
+  //   'import/order': 'off',
+  //   'sort-imports': 'off',
+  //   'simple-import-sort/sort': 'error',
+  // },
   rules,
-};
-
-
-eslint.overrides = [{
-  files: ['**/*.ts', '**/*.tsx'],
-  parser: '@typescript-eslint/parser',
-  extends: [
-    ...eslint.extends,
-    'plugin:@typescript-eslint/eslint-recommended',
-    'plugin:@typescript-eslint/recommended',
+  overrides: [
+    {
+      files: ['*.js', '*.jsx'],
+      rules: rulesJsOnly,
+    },
   ],
-}],
-
-
-
-module.exports = eslint;
+};

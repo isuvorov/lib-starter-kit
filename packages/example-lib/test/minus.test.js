@@ -1,5 +1,5 @@
 /* global test expect */
-import minus from '../src/minus';
+import { minus } from '../src/minus';
 
 test('check 1 - 1', () => {
   expect(minus(1, 1)).toBe(0);
