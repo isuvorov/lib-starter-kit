@@ -109,7 +109,7 @@
     "react-modal": "3.11.1",
     "react-progressive-image": "0.6.0",
     "react-router-dom": "5.1.2",
-    "socket.io": "2.3.0",
+    "socket.io": "2.4.0",
     "socket.io-as-promised": "1.0.0",
     "telegraf": "3.36.0",
     "validator": "12.2.0",
