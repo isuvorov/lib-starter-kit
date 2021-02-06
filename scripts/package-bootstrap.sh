@@ -14,8 +14,7 @@ fi && \
 if [ "$NODE_ENV" != "production" ]
 then
   ../../node_modules/npm-check-updates/bin/ncu --dep=prod,dev,peer,optional && \
-  npm run bootstrap:nodemodules && \
-  npm run link:me
+  ../../scripts/package-bootstrap-nodemodules.sh
 else
   true
 fi && \
