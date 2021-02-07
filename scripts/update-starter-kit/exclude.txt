@@ -1,0 +1,15 @@
+packages/
+todo/
+node_modules/
+.idea
+.cache
+.git
+.lskjs.js
+coverage
+lerna.json
+README.md
+CHANGELOG.md
+.all-contributorsrc
+.env.*
+__*
+scripts/release-after-hook.sh
