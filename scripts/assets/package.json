@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lsk": "lsk",
     "start": "lsk run start",
     "dev": "lsk run dev",
     "dev:server": "lsk run dev:server",

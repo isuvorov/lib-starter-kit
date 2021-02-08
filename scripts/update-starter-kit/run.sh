@@ -2,6 +2,11 @@
 DIRTO='.'
 DIR=`pwd`
 
+rm -rf scripts/assets && \
+rm -rf scripts/opt && \
+rm -rf scripts/package && \
+rm -rf scripts/run && \
+rm -rf scripts/update-starter-kit && \
 # rm -rf scripts/* && \
 rsync -avEp --progress \
   --exclude-from='scripts/update-starter-kit/exclude.txt' \
