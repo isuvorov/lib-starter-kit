@@ -1,5 +1,7 @@
-const eslintConfig = require('../.eslintrc.js');
+/* eslint-disable no-param-reassign */
+const eslintConfig = require('../../../.eslintrc.js');
 const path = require('path');
+
 process.env.DANGEROUSLY_DISABLE_HOST_CHECK = 'true';
 
 module.exports = function override(config) {
@@ -14,7 +16,7 @@ module.exports = function override(config) {
     cacheDirectory: true,
     cacheCompression: false,
     compact: false,
-    configFile: path.resolve(__dirname, '../.babelrc.js'),
+    configFile: path.resolve(__dirname, '../../../.babelrc.js'),
   };
 
   // Babel loader without runtime
@@ -23,12 +25,12 @@ module.exports = function override(config) {
   config.module.rules[2].oneOf[2].options = {
     babelrc: false,
     compact: false,
-    configFile: path.resolve(__dirname, '../.babelrc.js'),
+    configFile: path.resolve(__dirname, '../../../.babelrc.js'),
     cacheDirectory: true,
     cacheCompression: false,
     cacheIdentifier: bLWoR.options.cacheIdentifier,
     sourceMaps: true,
-    inputSourceMap: true
+    inputSourceMap: true,
   };
 
   return config;

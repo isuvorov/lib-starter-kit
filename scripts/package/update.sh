@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # preinit
-rm -rf .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt && \
+rm -rf .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt .storybook && \
 rsync -avEp ../../tsconfig.json ../../tsconfig.types.json . && \
 rsync -avEp  ../../scripts/assets/files/ . 
 

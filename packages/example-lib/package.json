@@ -13,7 +13,7 @@
     "dev": "npm run watch",
     "postversion": "npm run release",
     "lint:js": "../../scripts/package-lint-js.sh",
-    "bootstrap": "../../scripts/package-bootstrap.sh",
+    "bootstrap": "lsk run bootstrap",
     "bootstrap:nodemodules": "../../scripts/package-bootstrap-nodemodules.sh",
     "update": "../../scripts/package-update.sh",
     "build": "../../scripts/package-build.sh",
