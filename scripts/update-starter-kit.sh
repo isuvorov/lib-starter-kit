@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./scripts/update-starter-kit/run.sh
+./scripts/run/update-starter-kit/run.sh

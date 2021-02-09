@@ -1,5 +1,6 @@
-
 import range from 'lodash/range';
+import React from 'react';
+
 import double from './double';
 import { quadro } from './quadro';
 

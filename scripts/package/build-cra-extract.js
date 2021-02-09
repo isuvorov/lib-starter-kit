@@ -2,9 +2,7 @@
 /* eslint-disable no-shadow */
 /* eslint-disable import/no-dynamic-require */
 /* eslint-disable no-console */
-const ready = require('@lskjs/utils/polyfill');
-const {shell} = require('@lskjs/sh/shell')
-const {run} = require('../utils/utils')
+const { run } = require('@lskjs/cli/utils');
 
 const main = async () => {
   const dir = process.cwd();
@@ -14,7 +12,7 @@ const main = async () => {
   function getVendorName(manifest, ext = 'css') {
     const prefix = `static/${ext}/`;
     const vendorEntrypoints = manifest.entrypoints.filter(
-      entrypoint =>
+      (entrypoint) =>
         entrypoint.startsWith(prefix) &&
         !(entrypoint.startsWith(`${prefix}main.`) || entrypoint.startsWith(`${prefix}runtime-main.`)),
     );
@@ -42,6 +40,6 @@ const main = async () => {
   console.log(`files["vendor.css"] => ${manifest.files['vendor.css']}`);
   console.log(`files["vendor.js"] => ${manifest.files['vendor.js']}`);
   require('fs').writeFileSync(assetManifestPath, JSON.stringify(manifest));
-}
+};
 
-run(main)
+run(main);

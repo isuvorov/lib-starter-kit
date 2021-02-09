@@ -12,4 +12,4 @@ CHANGELOG.md
 .all-contributorsrc
 .env.*
 __*
-scripts/release-after-hook.sh
+scripts/hooks

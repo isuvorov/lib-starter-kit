@@ -1,13 +1,11 @@
 #!/usr/bin/env node
-const ready = require('@lskjs/utils/polyfill');
-const {shell} = require('@lskjs/sh/shell')
-const {hasCra, run} = require('../utils/utils')
+const { shell, hasCra, run } = require('@lskjs/cli/utils')
 
 const main = async () => {
-  await shell('lsk run build:js')
+  await shell('lsk run build:js');
   if (hasCra()) {
-    await shell('lsk run build:cra')
+    await shell('lsk run build:cra');
   }
-}
+};
 
-run(main)
+run(main);

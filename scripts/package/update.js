@@ -1,16 +1,21 @@
 #!/usr/bin/env node
-const ready = require('@lskjs/utils/polyfill');
-const fs = require('fs');
-const {shell} = require('@lskjs/sh/shell')
-const {run, hasCra, rootPath, packagePath} = require('../utils/utils')
+
+const { shell } = require('@lskjs/cli/utils');
+const { run, hasCra, rootPath, packagePath } = require('@lskjs/cli/utils');
 
 const main = async () => {
-  await shell('rm -rf .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt .storybook');
-  await shell(`rsync -aEp ${rootPath('tsconfig.json')} ${rootPath('tsconfig.types.json')} ${packagePath('.')}`);
+  await shell('where lsk');
+  await shell(
+    // eslint-disable-next-line max-len
+    'rm -rf .babelrc .babelrc.js .eslintrc.js styleguide.config.js tsconfig.json tsconfig.types.json .storybook bump.txt .storybook',
+  );
+
+  const files = ['tsconfig.json', 'tsconfig.types.json', '.babelrc.js'].map(rootPath).join(' ');
+  await shell(`rsync -aEp ${files} ${packagePath('.')}`);
   await shell(`lsk run merge`);
   if (hasCra()) {
-    await shell(`cp -R ${rootPath('scripts/assets/cra/*')} ${packagePath('cra')}`);
+    await shell(`lsk run update:cra`);
   }
   await shell(`lsk run ncu`);
-}
-run(main)
+};
+run(main);

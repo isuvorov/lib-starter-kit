@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lsk": "lsk",
     "dev": "lsk run dev",
     "postversion": "lsk run postversion",
     "lint:js": "lsk run lint:js",
@@ -11,19 +12,15 @@
     "release": "lsk run release",
     "release:docs": "lsk run release:docs",
     "storybook": "lsk run storybook",
-    "lsk": "lsk",
     "start": "lsk run start",
     "dev:server": "lsk run dev:server",
     "dev:cra": "lsk run dev:cra",
     "dev:cra-and-server": "lsk run dev:cra-and-server",
     "i18": "lsk run i18"
   },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
-  "name": "@lskjs/example-react",
+  "name": "@lskjs/example-ts",
   "version": "0.1.1",
   "description": "Hello world",
   "author": "Igor Suvorov <hi@isuvorov.com>",
@@ -31,6 +28,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib1",
+  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
   "keywords": []
 }

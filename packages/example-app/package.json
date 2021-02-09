@@ -1,35 +1,24 @@
 {
-  "name": "app",
-  "version": "0.0.1",
-  "description": "Hello world",
-  "author": "Igor Suvorov <hi@isuvorov.com>",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib1",
-  "keywords": [],
   "scripts": {
-    "dev": "npm run watch",
-    "postversion": "npm run release",
-    "lint:js": "../../scripts/package-lint-js.sh",
+    "dev": "lsk run dev",
+    "postversion": "lsk run postversion",
+    "lint:js": "lsk run lint:js",
     "bootstrap": "lsk run bootstrap",
-    "clear": "../../scripts/package-clear.sh",
-    "bootstrap:nodemodules": "../../scripts/package-bootstrap-nodemodules.sh",
-    "update": "../../scripts/package-update.sh",
-    "build": "BUILD_PARAMS=--copy-files ../../scripts/package-build.sh",
-    "watch": "BUILD_PARAMS=--copy-files ../../scripts/package-watch.sh",
-    "link": "../../scripts/package-link.sh",
-    "link:me": "../../scripts/package-link-me.sh",
-    "link:all": "../../scripts/package-link-all.sh",
-    "bump": "../../scripts/package-bump.sh",
-    "release": "BUILD_PARAMS=--copy-files ../../scripts/package-release.sh",
-    "release:docs": "../../scripts/package-release-docs.sh",
-    "storybook": "../../scripts/package-storybook.sh",
-    "styleguide": "../../scripts/package-styleguide.sh",
-    "start": "npm run server",
+    "update": "lsk run update",
+    "build": "lsk run build",
+    "watch": "lsk run watch",
+    "bump": "lsk run bump",
+    "release": "lsk run release",
+    "release:docs": "lsk run release:docs",
+    "storybook": "lsk run storybook",
+    "start": "lsk run start",
     "server": "node index.server.js",
-    "server:dev": "../../node_modules/nodemon/bin/nodemon.js index.server.js | ../../node_modules/@lskjs/log/bin/cli.js -o short -l trace"
+    "server:dev": "../../node_modules/nodemon/bin/nodemon.js index.server.js | ../../node_modules/@lskjs/log/bin/cli.js -o short -l trace",
+    "lsk": "lsk",
+    "dev:server": "lsk run dev:server",
+    "dev:cra": "lsk run dev:cra",
+    "dev:cra-and-server": "lsk run dev:cra-and-server",
+    "i18": "lsk run i18"
   },
   "dependencies": {
     "@babel/core": "7.8.4",
@@ -117,5 +106,15 @@
   },
   "devDependencies": {
     "@lskjs/build-locales": "1.100.1"
-  }
+  },
+  "name": "app",
+  "version": "0.0.1",
+  "description": "Hello world",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib1",
+  "keywords": []
 }
