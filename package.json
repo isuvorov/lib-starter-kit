@@ -5,7 +5,11 @@
   "author": "Igor Suvorov <hi@isuvorov.com>",
   "license": "MIT",
   "repository": "https://github.com/lskjs/lsk-cli",
-  "keywords": ["lskjs", "cli", "helper"],
+  "keywords": [
+    "lskjs",
+    "cli",
+    "helper"
+  ],
   "scripts": {
     "start": "lsk run start",
     "bootstrap": "lsk run bootstrap",

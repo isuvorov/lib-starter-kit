@@ -16,7 +16,7 @@ const main = async () => {
   }
 
   if (process.env.NODE_ENV !== 'production') {
-    await shell('lsk run ncu:check');
+    await shell('lsk run npm:update:check');
     await shell('lsk run bootstrap:nodemodules');
   }
 };

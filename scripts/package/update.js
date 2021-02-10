@@ -15,6 +15,6 @@ const main = async () => {
   if (hasCra()) {
     await shell(`lsk run update:cra`);
   }
-  await shell(`lsk run ncu`);
+  await shell(`lsk run npm:update`);
 };
 run(main);
