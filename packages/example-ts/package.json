@@ -18,8 +18,6 @@
     "dev:cra-and-server": "lsk run dev:cra-and-server",
     "i18": "lsk run i18"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "name": "@lskjs/example-ts",
   "version": "0.1.1",
   "description": "Hello world",

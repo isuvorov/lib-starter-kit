@@ -20,10 +20,11 @@
   },
   "dependencies": {
     "lodash": "^4.17.20",
-    "lodash-es": "^4.17.20",
     "react": "^17.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/lodash": "^4.14.168"
+  },
   "name": "@lskjs/example-lib",
   "version": "0.1.1",
   "description": "Hello world",

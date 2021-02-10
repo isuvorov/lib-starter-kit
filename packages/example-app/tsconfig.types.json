@@ -1,3 +1,6 @@
 {
-  "extends": "@lskjs/babel-preset/tsconfig.types.json"
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+  }
 }

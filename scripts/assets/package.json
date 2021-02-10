@@ -23,7 +23,5 @@
     "link:all": null,
     "styleguide": null,
     "clear": null
-  },
-  "dependencies": {},
-  "devDependencies": {}
+  }
 }

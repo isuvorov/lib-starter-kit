@@ -22,7 +22,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0"
   },
-  "devDependencies": {},
   "name": "@lskjs/example-react",
   "version": "0.1.1",
   "description": "Hello world",

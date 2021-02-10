@@ -1,12 +1,17 @@
 #!/usr/bin/env node
-const ready = 
-const fs = require('fs');
-const {shell} = require('@lskjs/sh/shell')
-const {run, hasCra, rootPath, packagePath} = require('lsk/utils')
+const { run, shell, findPath, packagePath } = require('@lskjs/cli/utils');
 
 const main = async () => {
-  await shell(`rsync -aEp ${findPath('scripts/assets/cra/package.json')} ${findPath('scripts/assets/cra/package-lock.json')} ${findPath('scripts/assets/cra/config-overrides.js')} ${packagePath('cra')}`);
+  const paths = [
+    'scripts/assets/cra/package.json',
+    'scripts/assets/cra/package-lock.json',
+    'scripts/assets/cra/config-overrides.js',
+  ]
+    .map(findPath)
+    .join(' ');
+
+  await shell(`rsync -aEp ${paths} ${packagePath('cra')}`);
   await shell(`rsync -aEp ${findPath('scripts/assets/cra/public')} ${packagePath('cra/public')}`);
   await shell(`rsync -aEp ${findPath('scripts/assets/cra/public/index.html')} ${packagePath('cra/public/index.html')}`);
-}
-run(main)
+};
+run(main);

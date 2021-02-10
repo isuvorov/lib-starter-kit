@@ -4,12 +4,18 @@ node_modules/
 .idea
 .cache
 .git
-.lskjs.js
 coverage
 lerna.json
-README.md
 CHANGELOG.md
-.all-contributorsrc
+# asd
+README.md
 .env.*
 __*
-scripts/hooks
+# asd
+scripts
+.lskjs.js
+.all-contributorsrc
+docker-stack.yml
+docker-compose.yml
+.gitlab.ci.yml
+.github

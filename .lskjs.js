@@ -7,5 +7,10 @@ module.exports = {
     dep: 'prod,dev,peer,optional',
     packages: '/^@(lskjs)/.*$/',
     newest: 1,
+  },
+  lerna: {
+    // releaseArgs: '--yes' // yes
+    // releaseArgs: '--github-release --yes' // github
+    // releaseArgs: '--github-release --yes --conventional-prerelease' // beta
   }
 };

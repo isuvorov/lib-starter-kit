@@ -1,4 +1,14 @@
 {
+  "name": "@lskjs/example-js",
+  "version": "0.1.1",
+  "description": "Hello world",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
+  "keywords": [],
   "scripts": {
     "lsk": "lsk",
     "dev": "lsk run dev",
@@ -17,18 +27,5 @@
     "dev:cra": "lsk run dev:cra",
     "dev:cra-and-server": "lsk run dev:cra-and-server",
     "i18": "lsk run i18"
-  },
-  "dependencies": {
-  },
-  "devDependencies": {},
-  "name": "@lskjs/example-lib",
-  "version": "0.1.1",
-  "description": "Hello world",
-  "author": "Igor Suvorov <hi@isuvorov.com>",
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
-  "keywords": []
+  }
 }
