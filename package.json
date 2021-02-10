@@ -13,8 +13,6 @@
     "release": "lsk run release",
     "i18": "lsk run i18",
     "build": "lsk run build",
-    "pre-commit": "echo 123",
-    "pre-push": "echo 123",
     "test": "lsk run test"
   },
   "dependencies": {
