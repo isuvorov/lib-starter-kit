@@ -7,11 +7,11 @@ node_modules/
 coverage
 lerna.json
 CHANGELOG.md
-# asd
+
 README.md
 .env.*
-__*
-# asd
+_*
+
 scripts
 .lskjs.js
 .all-contributorsrc
