@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
+# ../lskjs-cli/packages/cli-scripts/scripts \
 rm -rf \
   ../lskjs-cli/packages/cli-scripts/.storybook \
-  ../lskjs-cli/packages/cli-scripts/scripts \
   ../lskjs-cli/packages/cli-scripts/files \
   ../lskjs-cli/packages/cli-scripts/softFiles \
    && \

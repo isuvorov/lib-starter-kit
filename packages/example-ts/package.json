@@ -1,31 +1,23 @@
 {
-  "scripts": {
-    "lsk": "lsk",
-    "dev": "lsk run dev",
-    "postversion": "lsk run postversion",
-    "lint:js": "lsk run lint:js",
-    "bootstrap": "lsk run bootstrap",
-    "update": "lsk run update",
-    "build": "lsk run build",
-    "watch": "lsk run watch",
-    "bump": "lsk run bump",
-    "release": "lsk run release",
-    "release:docs": "lsk run release:docs",
-    "storybook": "lsk run storybook",
-    "start": "lsk run start",
-    "dev:server": "lsk run dev:server",
-    "dev:cra": "lsk run dev:cra",
-    "dev:cra-and-server": "lsk run dev:cra-and-server",
-    "i18": "lsk run i18"
-  },
   "name": "@lskjs/example-ts",
   "version": "0.1.1",
   "description": "Hello world",
-  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "keywords": [],
+  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
   "license": "MIT",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
+  "scripts": {
+    "bootstrap": "lsk run bootstrap",
+    "build": "lsk run build",
+    "dev": "lsk run dev",
+    "i18": "lsk run i18",
+    "release": "lsk run release",
+    "start": "lsk run start",
+    "storybook": "lsk run storybook",
+    "test": "lsk run test",
+    "watch": "lsk run watch"
+  },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
-  "keywords": []
+  }
 }

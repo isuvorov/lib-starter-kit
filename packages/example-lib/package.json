@@ -1,22 +1,21 @@
 {
+  "name": "@lskjs/example-lib",
+  "version": "0.1.1",
+  "description": "Hello world",
+  "keywords": [],
+  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
+  "license": "MIT",
+  "author": "Igor Suvorov <hi@isuvorov.com>",
   "scripts": {
-    "lsk": "lsk",
-    "dev": "lsk run dev",
-    "postversion": "lsk run postversion",
-    "lint:js": "lsk run lint:js",
     "bootstrap": "lsk run bootstrap",
-    "update": "lsk run update",
     "build": "lsk run build",
-    "watch": "lsk run watch",
-    "bump": "lsk run bump",
+    "dev": "lsk run dev",
+    "i18": "lsk run i18",
     "release": "lsk run release",
-    "release:docs": "lsk run release:docs",
-    "storybook": "lsk run storybook",
     "start": "lsk run start",
-    "dev:server": "lsk run dev:server",
-    "dev:cra": "lsk run dev:cra",
-    "dev:cra-and-server": "lsk run dev:cra-and-server",
-    "i18": "lsk run i18"
+    "storybook": "lsk run storybook",
+    "test": "lsk run test",
+    "watch": "lsk run watch"
   },
   "dependencies": {
     "lodash": "^4.17.20",
@@ -25,14 +24,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.168"
   },
-  "name": "@lskjs/example-lib",
-  "version": "0.1.1",
-  "description": "Hello world",
-  "author": "Igor Suvorov <hi@isuvorov.com>",
-  "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "repository": "https://github.com/isuvorov/lib-starter-kit/tree/master/packages/lib2",
-  "keywords": []
+  }
 }
