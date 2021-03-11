@@ -18,7 +18,7 @@
     "watch": "lsk run watch"
   },
   "dependencies": {
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.19",
     "react": "^17.0.1"
   },
   "devDependencies": {
